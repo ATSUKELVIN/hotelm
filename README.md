@@ -1,28 +1,30 @@
 # Hotel Management System
 
-A full-stack web application for managing hotels, rooms, guests, and reservations.
+A full-stack web application for managing hotels, rooms, guests, and reservations with beautiful SVG hotel visualizations.
 
 ## Features
 
-- **Hotel Management**: Create, read, update, and delete hotels
+- **Hotel Management**: Create, read, update, and delete hotels with images
 - **Room Management**: Manage hotel rooms with details like type, capacity, and amenities
 - **Guest Management**: Store and manage guest information
 - **Reservations**: Book rooms for guests with check-in/check-out dates and special requests
 - **Room Status Tracking**: Automatic room status updates based on reservations
-- **Responsive UI**: Clean and intuitive user interface
+- **Responsive UI**: Beautiful card-based grid layout with SVG hotel images
+- **International Hotels**: 15 pre-seeded hotels from US, Africa, and worldwide
 
 ## Tech Stack
 
 ### Backend
 - **Node.js** with Express.js
-- **MongoDB** for database
+- **MongoDB** for database (in-memory with mongodb-memory-server)
 - **Mongoose** for ODM
 - **CORS** for cross-origin requests
 
 ### Frontend
 - **React** 18
 - **Axios** for API calls
-- **CSS3** for styling
+- **CSS3 Grid** for responsive layout
+- **SVG** for hotel visualizations
 
 ## Project Structure
 

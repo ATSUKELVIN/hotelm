@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
 import HotelList from './components/HotelList';
+import HotelDetail from './components/HotelDetail';
 import HotelForm from './components/HotelForm';
 import ReservationList from './components/ReservationList';
 import ReservationForm from './components/ReservationForm';
 import './styles/index.css';
 
 function App() {
-    const [currentSection, setCurrentSection] = useState('hotels');
     const [editingHotel, setEditingHotel] = useState(null);
     const [editingReservation, setEditingReservation] = useState(null);
     const [refreshKey, setRefreshKey] = useState(0);
@@ -30,30 +32,49 @@ function App() {
     };
 
     return (
-        <div className="app-container">
-            <header>
-                <h1>🏨 Hotel Management System</h1>
-                <nav>
-                    <button
-                        className={currentSection === 'hotels' ? 'active' : ''}
-                        onClick={() => {
-                            setCurrentSection('hotels');
-                            setEditingHotel(null);
+        <BrowserRouter>
+            <div className="app-container">
+                <Header />
+                <div className="content">
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={
+                                <HotelList
+                                    onEdit={handleHotelEdit}
+                                    onRefresh={refreshKey}
+                                />
+                            }
+                        />
+                        <Route
+                            path="/hotel/:id"
+                            element={<HotelDetail />}
+                        />
+                        <Route
+                            path="/reservations"
+                            element={
+                                <>
+                                    {editingReservation && (
+                                        <ReservationForm
+                                            reservation={editingReservation}
+                                            onSubmit={handleReservationSubmit}
+                                        />
+                                    )}
+                                    <ReservationList
+                                        onEdit={handleReservationEdit}
+                                        onRefresh={refreshKey}
+                                    />
+                                </>
+                            }
+                        />
+                    </Routes>
+                </div>
                         }}
                     >
-                        Hotels
-                    </button>
-                    <button
-                        className={currentSection === 'reservations' ? 'active' : ''}
-                        onClick={() => {
-                            setCurrentSection('reservations');
-                            setEditingReservation(null);
-                        }}
-                    >
-                        Reservations
-                    </button>
-                </nav>
-            </header>
+                Reservations
+            </button>
+        </nav>
+            </header >
 
             <div className="content">
                 {currentSection === 'hotels' && (
@@ -132,7 +153,7 @@ function App() {
             <footer>
                 <p>&copy; 2026 Hotel Management System. All rights reserved.</p>
             </footer>
-        </div>
+        </div >
     );
 }
 

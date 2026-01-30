@@ -26,21 +26,12 @@ body {
     min-height: calc(100vh - 80px);
 }
 
-transition: background-color 0.3s;
-}
-
 nav button:hover {
     background-color: #2980b9;
 }
 
 nav button.active {
     background-color: #27ae60;
-}
-
-.content {
-    padding: 20px;
-    background-color: #ecf0f1;
-    min-height: calc(100vh - 200px);
 }
 
 footer {

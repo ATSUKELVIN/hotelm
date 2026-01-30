@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFB347"/>
+      <stop offset="1" stop-color="#FFE4B5"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#A0522D"/>
+      <stop offset="1" stop-color="#8B4513"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <ellipse cx="400" cy="480" rx="220" ry="90" fill="#90EE90" opacity="0.6"/>
+  <rect x="150" y="140" width="500" height="380" fill="url(#building)" rx="12"/>
+  <g id="balcony">
+    <rect x="190" y="160" width="90" height="130" fill="#CD853F" stroke="#654321" stroke-width="2" rx="4"/>
+    <line x1="205" y1="160" x2="205" y2="290" stroke="#654321" stroke-width="1.5"/>
+    <line x1="220" y1="160" x2="220" y2="290" stroke="#654321" stroke-width="1.5"/>
+    <line x1="235" y1="160" x2="235" y2="290" stroke="#654321" stroke-width="1.5"/>
+    <line x1="250" y1="160" x2="250" y2="290" stroke="#654321" stroke-width="1.5"/>
+    <line x1="265" y1="160" x2="265" y2="290" stroke="#654321" stroke-width="1.5"/>
+  </g>
+  <use href="#balcony" x="100" y="0"/>
+  <use href="#balcony" x="200" y="0"/>
+  <circle cx="90" cy="90" r="50" fill="#FFD700" opacity="0.9"/>
+  <text x="400" y="530" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#FFE4B5" text-anchor="middle">RITZ-CARLTON</text>
+</svg>

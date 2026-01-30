@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#2c3e50"/>
+      <stop offset="1" stop-color="#34495e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="400" cy="150" r="80" fill="#FFD700" opacity="0.8"/>
+  <polygon points="200,400 400,150 600,400 450,400 450,500 350,500 350,400" fill="#C41E3A"/>
+  <polygon points="200,400 400,200 600,400" fill="#8B0000" opacity="0.5"/>
+  <g id="window">
+    <rect x="250" y="300" width="40" height="40" fill="#87CEEB" stroke="#000" stroke-width="2"/>
+    <line x1="270" y1="300" x2="270" y2="340" stroke="#000" stroke-width="1"/>
+    <line x1="250" y1="320" x2="290" y2="320" stroke="#000" stroke-width="1"/>
+  </g>
+  <use href="#window" x="60" y="0"/>
+  <use href="#window" x="120" y="0"/>
+  <use href="#window" x="0" y="70"/>
+  <use href="#window" x="60" y="70"/>
+  <use href="#window" x="120" y="70"/>
+  <text x="400" y="540" font-family="Georgia, serif" font-size="32" font-weight="bold" fill="#FFD700" text-anchor="middle">MARRIOTT MARQUIS</text>
+</svg>

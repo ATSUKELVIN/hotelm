@@ -28,7 +28,7 @@ function App() {
                     <Routes>
                         <Route
                             path="/"
-                            element={<HotelList onEdit={() => {}} onRefresh={refreshKey} />}
+                            element={<HotelList onEdit={() => { }} onRefresh={refreshKey} />}
                         />
                         <Route path="/hotel/:id" element={<HotelDetail />} />
                         <Route
